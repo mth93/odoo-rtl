@@ -46,7 +46,7 @@ class ir_http(orm.AbstractModel):
             return super(ir_http, self)._dispatch()
 
         else:
-            resp = super(ir_http, self)._dispatch()
+           # resp = super(ir_http, self)._dispatch()
             cook_lang = request.httprequest.cookies.get('website_lang')
             cook_lang = getattr(request, 'lang', False) or (cook_lang or 'en_US')
             ws = request.registry['website'].get_current_website(request.cr, request.uid, context=request.context)
